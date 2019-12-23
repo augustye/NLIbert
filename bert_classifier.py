@@ -79,8 +79,6 @@ class ClassificationModel:
 
         torch.save(self.model.state_dict(), model_save_path)
 
-        if not os.path.exists(path_config):
-            os.makedirs(path_config)
         with open(path_config, 'w') as f:
             f.write(self.model.config.to_json_string())
 
