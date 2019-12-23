@@ -75,7 +75,7 @@ class ClassificationModel:
     def save_model(self, path_model, path_config, acc, f1):
 
         model_save_path = os.path.join(path_model,
-                                       'model_{}_{:.4f}_{:.4f}_{:.4f}'.format(iter, acc, f1))
+                                       'model_acc_{:.4f}_f1_{:.4f}'.format(acc, f1))
 
         torch.save(self.model.state_dict(), model_save_path)
 
